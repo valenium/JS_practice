@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="form.js"></script>
 </head>
+
 <body>
 
+    <h1>Form</h1>
+
+    <form action="" id="form">
+        <input type="text" name="text" id="text">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const formEl = document.getElementById('form')
+        const inputEl = document.getElementById('text')
+
+        formEl.addEventListener('submit', (e) => {
+            e.preventDefault()
+            console.log(inputEl.value)
+        })
+    </script>
+
 </body>
+
 </html>
